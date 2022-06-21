@@ -3,18 +3,27 @@
 //
 #include "iostream"
 
-int linearSearch(int arr[], int element) {
-//    for (int i = 0; i < arr; i++)
+using namespace std;
+
+int binarySearch(int len, int arr[], int element)
+{
+
+    for (int i = 0; i < len; i++)
+    {
+        if (arr[i] == element) {
+            return 1;
+        }
+    }
 
     return -1;
+
 }
 
-int main(){
-    int arr[] = {45,6,98,21};
+int main()
+{
+    int arr[] = {45, 6, 98, 21};
 
-    linearSearch(arr,  67);
-
+    cout<<binarySearch(4, arr, 6);
 
     return 0;
-
 }
